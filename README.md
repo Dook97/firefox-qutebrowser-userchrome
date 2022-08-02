@@ -12,7 +12,7 @@ This config is a (soft) fork of
 The main differences are:
 
 - this one is maintained, because I use it
-- navbar isn't completely removed; it shows on focus (hover or Ctrl+l)
+- navbar isn't completely removed; it shows on focus (hover or `Ctrl+L`)
 - color of text in tabs is determined by the color code of the tab's container
 
 It's goal is to remove all unncessary visual clutter while preserving
@@ -67,5 +67,5 @@ Some tips:
 
 * On linux there will often be a key, which toggles window moving mode. For me
   it's left alt.
-* Ctrl+shift+W or Ctrl+Q closes Firefox
-* Ctrl+L toggles the navbar
+* `Ctrl+shift+W` or `Ctrl+Q` closes Firefox
+* `Ctrl+L` toggles the navbar
