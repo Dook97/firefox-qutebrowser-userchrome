@@ -34,14 +34,10 @@ Enable compact mode in `about:config`:
 
 Enable dark theme in settings.
 
-Clone this repo, then copy the `chrome` directory to your firefox profile:
+Clone this repo, then copy the `userChrome.css` to the `chrome` directory in
+your firefox profile. If there is none create it.
 
-```sh
-git clone https://github.com/Dook97/firefox-config
-cp -r ./firefox-config/chrome ~/.mozilla/firefox/[YOUR_PROFILE]/
-```
-
-If you're not sure, which of the directories is your profile, you can find out
+If you're not sure, what is the path to your profile's directory, you can find out
 by going to `about:profiles`
 
 If you want the navbar to show on hover go to the bottom of the file and
@@ -55,7 +51,17 @@ Then either install the Jetbrains Mono font, or change the relevant line
 
 ### black stripe under tab bar
 
-increase the value of the `--tab-min-height` variable in userChrome.css
+Increase the value of the `--tab-min-height` variable in userChrome.css.
+
+### invisible button at the end of urlbar
+
+This is intentional - it preserves the `Ctrl-D` functionality. If you don't
+need that, you can remove it in the code. Search for `star-button-box` and
+uncomment the line in question.
+
+### I want favicons
+
+Search for 'disable favicons' and comment out the relevant line.
 
 ## Is it practical?
 
@@ -65,7 +71,8 @@ whole new level.
 
 Some tips:
 
-* On linux there will often be a key, which toggles window moving mode. For me
-  it's left alt.
+* On linux there will often be a key, which toggles window moving mode.
+  Oftentimes it's left `Alt`.
 * `Ctrl+shift+W` or `Ctrl+Q` closes Firefox
 * `Ctrl+L` toggles the navbar
+* `Ctrl+F Esc` will defocus urlbar.
