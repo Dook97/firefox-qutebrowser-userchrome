@@ -125,14 +125,13 @@
 /* Change color of normal tabs */
 tab:not([selected="true"]) {
 	background-color: #333333 !important;
+	color: var(--identity-icon-color, #888) !important;
 }
 
 tab {
 	font-family: 'Jetbrains Mono', monospace;
 	font-weight: bold;
 	border: none !important;
-	/* set tab text color to container color */
-	color: var(--identity-icon-color, #fff) !important;
 }
 
 /* safari style tab width */
@@ -160,6 +159,7 @@ tab {
 #tabbrowser-tabs .tabbrowser-tab[selected] .tab-content {
 	background: #005577 !important;
 	border: none !important;
+	color: var(--identity-icon-color, #fff) !important;
 }
 
 /* Tab: hovered colors */
