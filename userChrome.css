@@ -144,7 +144,7 @@ tab {
 #tabbrowser-tabs .tab-context-line { display: none }
 
 /* disable favicons in tab */
-.tab-icon-stack { display: none !important; }
+.tab-icon-stack:not([pinned]) { display: none !important; }
 
 /* remove border between tabs */
 .tabbrowser-tab { padding-inline: 0px !important; }
