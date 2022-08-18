@@ -147,7 +147,10 @@ tab {
 .tab-icon-stack:not([pinned]) { display: none !important; }
 
 /* remove border between tabs */
-.tabbrowser-tab { padding-inline: 0px !important; }
+.tabbrowser-tab {
+	padding-inline: 0px !important;
+	overflow-clip-margin: 0px !important;
+}
 
 /* remove min-height from tabs toolbar (needed for fullscreen one tab) */
 #TabsToolbar,
@@ -189,6 +192,14 @@ tab {
 /* remove dark space between pinned tab and first non-pinned tab */
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab[first-visible-unpinned-tab] {
 	margin-inline-start: 0px !important;
+}
+
+/* remove dropdown menu button which displays all tabs on overflow */
+#alltabs-button { display: none !important }
+
+/* fix displaying of pinned tabs on overflow */
+#tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container {
+	height: var(--tab-min-height) !important;
 }
 
 /* ----------------- END STYLE TAB TOOLBAR ----------------- */
