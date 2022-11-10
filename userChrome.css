@@ -1,9 +1,9 @@
 /* change these variables to get different colors */
-#tabbrowser-tabs {
-	--tab-active-bg-color: #005577;
-	--tab-inactive-bg-color: #333333;
-	--tab-active-fallback-fg-color: #ffffff;
-	--tab-inactive-fallback-fg-color: #888888;
+:root {
+	--tab-active-bg-color: #005577;         /* background color of an active tab */
+	--tab-inactive-bg-color: #333333;       /* background color of an inactive tab */
+	--tab-active-fg-fallback-color: #eee;   /* color of text in an active tab without a container */
+	--tab-inactive-fg-fallback-color: #888; /* color of text in an inactive tab without a container */
 }
 
 /* change to control tabbar height */
@@ -124,7 +124,7 @@
 /* Change color of normal tabs */
 tab:not([selected="true"]) {
 	background-color: var(--tab-inactive-bg-color) !important;
-	color: var(--identity-icon-color, --tab-inactive-fallback-fg-color) !important;
+	color: var(--identity-icon-color, var(--tab-inactive-fg-fallback-color)) !important;
 }
 
 tab {
@@ -154,7 +154,7 @@ tab {
 /* Tab: selected colors */
 #tabbrowser-tabs .tabbrowser-tab[selected] .tab-content {
 	background: var(--tab-active-bg-color) !important;
-	color: var(--identity-icon-color, --tab-active-fallback-fg-color) !important;
+	color: var(--identity-icon-color, var(--tab-active-fg-fallback-color)) !important;
 }
 
 /* Tab: hovered colors */
@@ -203,8 +203,7 @@ tab {
 	transform: scaleY(0) !important;
 }
 
-/* #titlebar:hover~#nav-bar, */
-/* #nav-bar:hover, */
+/* show on focus */
 #nav-bar:focus-within {
 	--moz-transform: scale(1) !important;
 	transform: scale(1) !important;
@@ -212,14 +211,12 @@ tab {
 	height: var(--urlbar-height) !important;
 	min-height: var(--urlbar-height) !important;
 }
-
-/* show on toolbox focus */
 #navigator-toolbox:focus-within > .browser-toolbar {
 	transform: translateY(0);
 	opacity: 1;
 }
 
-/* show on toolbox hover */
+/* show on hover */
 /* #titlebar:hover ~ .browser-toolbar,
 #nav-bar:hover,
 #nav-bar:hover + #PersonalToolbar {
