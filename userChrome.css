@@ -30,13 +30,13 @@
 #customizableui-special-spring1,
 #customizableui-special-spring2 { display: none; }
 
+/* --- STYLE URLBAR ------------------------------------- */
+
 #nav-bar,
 #navigator-toolbox {
 	border-width: 0 !important;
 	--toolbar-field-focus-border-color: #42414d;
 }
-
-/* --- STYLE URLBAR ------------------------------------- */
 
 #urlbar-container {
 	--urlbar-container-height: var(--tab-min-height) !important;
@@ -116,14 +116,6 @@
 	--tab-block-margin: 0 !important;
 }
 
-:root:not([customizing]) #TabsToolbar{
-	background-color: #222;
-}
-
-:root:not([customizing]) #navigator-toolbox {
-	background-color: #222 !important;
-}
-
 #TabsToolbar, .tabbrowser-tab {
 	max-height: var(--tab-min-height) !important;
 	font-size: 11px !important;
@@ -147,11 +139,8 @@ tab {
 /* Hide close button on tabs */
 #tabbrowser-tabs .tabbrowser-tab .tab-close-button { display: none !important; }
 
-/* hide container line on tab*/
-#tabbrowser-tabs .tab-context-line { display: none }
-
 /* disable favicons in tab */
-.tab-icon-stack:not([pinned]) { display: none !important; }
+/* .tab-icon-stack:not([pinned]) { display: none !important; } */
 
 .tabbrowser-tab {
 	/* remove border between tabs */
@@ -162,16 +151,9 @@ tab {
 	overflow-clip-margin: 0px !important;
 }
 
-/* remove min-height from tabs toolbar (needed for fullscreen one tab) */
-#TabsToolbar,
-#tabbrowser-tabs,
-#tabbrowser-tabs > .tabbrowser-arrowscrollbox,
-#tabbrowser-arrowscrollbox { min-height: 0 !important; }
-
 /* Tab: selected colors */
 #tabbrowser-tabs .tabbrowser-tab[selected] .tab-content {
 	background: var(--tab-active-bg-color) !important;
-	border: none !important;
 	color: var(--identity-icon-color, --tab-active-fallback-fg-color) !important;
 }
 
@@ -179,14 +161,6 @@ tab {
 #tabbrowser-tabs .tabbrowser-tab:hover:not([selected]) .tab-content {
 	background: var(--tab-active-bg-color) !important;
 }
-
-/* remove white margin around active tabs */
-#tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab[beforeselected-visible]::after,
-#tabbrowser-tabs[movingtab] > #tabbrowser-arrowscrollbox > .tabbrowser-tab[visuallyselected]::before,
-.tabbrowser-tab[visuallyselected]::after { border: none !important; }
-
-/*AGENT_SHEET*/
-#main-window #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) { background: var(--tab-active-bg-color) !important; }
 
 /* hide window controls */
 .titlebar-buttonbox-container { display: none; }
@@ -244,10 +218,19 @@ tab {
 	transform: translateY(0);
 	opacity: 1;
 }
+
 /* show on toolbox hover */
-/* #titlebar:hover ~ .browser-toolbar, */
-/* #nav-bar:hover, */
-/* #nav-bar:hover + #PersonalToolbar { */
-/* 	transform: translateY(0); */
-/* 	opacity: 1; */
-/* } */
+/* #titlebar:hover ~ .browser-toolbar,
+#nav-bar:hover,
+#nav-bar:hover + #PersonalToolbar {
+	transform: translateY(0);
+	opacity: 1;
+}
+#titlebar:hover~#nav-bar,
+#nav-bar:hover {
+	--moz-transform: scale(1) !important;
+	transform: scale(1) !important;
+	max-height: var(--urlbar-height) !important;
+	height: var(--urlbar-height) !important;
+	min-height: var(--urlbar-height) !important;
+} */

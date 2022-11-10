@@ -59,9 +59,9 @@ This is intentional - it preserves the `Ctrl-D` functionality. If you don't
 need that, you can remove it in the code. Search for `star-button-box` and
 uncomment the line in question.
 
-### I want favicons
+### I want to disable favicons
 
-Search for 'disable favicons' and comment out the relevant line.
+Search for 'disable favicons' and uncomment the relevant line.
 
 ## Is it practical?
 
