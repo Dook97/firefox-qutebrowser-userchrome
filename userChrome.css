@@ -3,15 +3,18 @@
 	--tab-inactive-bg-color: #333;		/* background color of an inactive tab */
 	--tab-active-fg-fallback-color: #eee;	/* color of text in an active tab without a container */
 	--tab-inactive-fg-fallback-color: #888;	/* color of text in an inactive tab without a container */
+
+	/* try increasing if you encounter problems */
+	--urlbar-height: 24px;
+	--tab-min-height: 16px !important;
+
+	/* I don't recommend you touch this unless you know what you're doing */
 	--arrowpanel-menuitem-padding: 2px !important;
 	--arrowpanel-border-radius: 0px !important;
 	--arrowpanel-menuitem-border-radius: 0px !important;
 	--toolbarbutton-border-radius: 0px !important;
+	--toolbarbutton-inner-padding: 0px !important;
 }
-
-/* change to control tabbar height */
-/* try increasing to 20px if you see a black line under tabbar */
-#titlebar { --tab-min-height: 16px !important; }
 
 /* --- GENERAL DEBLOAT ---------------------------------- */
 
@@ -48,7 +51,7 @@ toolbar .toolbarbutton-1 {
 }
 
 #urlbar-container {
-	--urlbar-container-height: var(--tab-min-height) !important;
+	--urlbar-container-height: var(--urlbar-height) !important;
 	margin-left: 0 !important;
 	margin-right: 0 !important;
 	padding-top: 0 !important;
@@ -58,9 +61,9 @@ toolbar .toolbarbutton-1 {
 }
 
 #urlbar {
-	--urlbar-height: var(--tab-min-height) !important;
-	--urlbar-toolbar-height: var(--tab-min-height) !important;
-	min-height: var(--tab-min-height) !important;
+	--urlbar-height: var(--urlbar-height) !important;
+	--urlbar-toolbar-height: var(--urlbar-height) !important;
+	min-height: var(--urlbar-height) !important;
 	border-color: var(--lwt-toolbar-field-border-color, hsla(240,5%,5%,.25)) !important;
 }
 
