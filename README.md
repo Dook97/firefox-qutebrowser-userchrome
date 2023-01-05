@@ -4,7 +4,13 @@ Firefox allows a great deal of customization. In fact it goes as far as to give
 you the option to completely change the look of the program. That's what
 userChrome.css does.
 
-![](./screenshots/screencap.png)
+How it looks:
+
+![](./screenshots/basic.png)
+
+With navbar shown:
+
+![](./screenshots/urlbar.png)
 
 This config is a (soft) fork of
 [aadilayub's](https://github.com/aadilayub/firefox-i3wm-theme).
