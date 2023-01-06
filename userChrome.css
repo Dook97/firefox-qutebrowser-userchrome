@@ -13,7 +13,7 @@
 	--arrowpanel-border-radius: 0px !important;
 	--arrowpanel-menuitem-border-radius: 0px !important;
 	--toolbarbutton-border-radius: 0px !important;
-	--toolbarbutton-inner-padding: 0px !important;
+	--toolbarbutton-inner-padding: 0px 2px !important;
 }
 
 /* --- GENERAL DEBLOAT ---------------------------------- */
@@ -38,11 +38,16 @@
 /* empty space before and after the url bar */
 #customizableui-special-spring1, #customizableui-special-spring2 { display: none; }
 
-/* --- STYLE TOOLBAR ------------------------------------ */
+/* --- STYLE NAVBAR ------------------------------------ */
 
 /* remove padding between toolbar buttons */
 toolbar .toolbarbutton-1 {
 	padding: 0 0 !important;
+}
+
+/* add padding to the right of the last button so that it doesn't touch the edge of the window */
+#PanelUI-menu-button {
+	padding: 0px 4px 0px 0px !important;
 }
 
 #nav-bar, #navigator-toolbox {
