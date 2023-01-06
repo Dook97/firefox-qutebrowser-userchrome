@@ -85,7 +85,7 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 	margin-right: 0.4em !important;
 }
 
-/* weird hack to keep pop-up menus from overlapping with navbar */
+/* keep pop-up menus from overlapping with navbar */
 #widget-overflow { margin: 0 !important; }
 #appMenu-popup { margin: 0 !important; }
 #customizationui-widget-panel { margin: 0 !important; }
