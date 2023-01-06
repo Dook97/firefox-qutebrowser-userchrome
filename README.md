@@ -15,13 +15,7 @@ With navbar shown:
 This config is a (soft) fork of
 [aadilayub's](https://github.com/aadilayub/firefox-i3wm-theme).
 
-The main differences are:
-
-- this one is maintained, because I use it
-- navbar isn't completely removed; it shows on focus (hover or `Ctrl+L`)
-- color of text in tabs is determined by the color code of the tab's container
-
-It's goal is to remove all unncessary visual clutter while preserving
+Its goal is to remove all unncessary visual clutter while preserving
 functionality. That means you could use this user chrome with an otherwise
 normal firefox config, though I recommend you give a try to the
 [tridactyl](https://github.com/tridactyl/tridactyl) extension, which I think

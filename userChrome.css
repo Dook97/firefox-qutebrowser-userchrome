@@ -5,7 +5,7 @@
 	--tab-inactive-fg-fallback-color: #888;	/* color of text in an inactive tab without a container */
 
 	/* try increasing if you encounter problems */
-	--urlbar-height: 24px;
+	--urlbar-height-setting: 24px;
 	--tab-min-height: 16px !important;
 
 	/* I don't recommend you touch this unless you know what you're doing */
@@ -56,7 +56,7 @@ toolbar .toolbarbutton-1 {
 }
 
 #urlbar-container {
-	--urlbar-container-height: var(--urlbar-height) !important;
+	--urlbar-container-height: var(--urlbar-height-setting) !important;
 	margin-left: 0 !important;
 	margin-right: 0 !important;
 	padding-top: 0 !important;
@@ -66,9 +66,9 @@ toolbar .toolbarbutton-1 {
 }
 
 #urlbar {
-	--urlbar-height: var(--urlbar-height) !important;
-	--urlbar-toolbar-height: var(--urlbar-height) !important;
-	min-height: var(--urlbar-height) !important;
+	--urlbar-height: var(--urlbar-height-setting) !important;
+	--urlbar-toolbar-height: var(--urlbar-height-setting) !important;
+	min-height: var(--urlbar-height-setting) !important;
 	border-color: var(--lwt-toolbar-field-border-color, hsla(240,5%,5%,.25)) !important;
 }
 
@@ -202,9 +202,9 @@ tab {
 #nav-bar:focus-within {
 	--moz-transform: scale(1) !important;
 	transform: scale(1) !important;
-	max-height: var(--urlbar-height) !important;
-	height: var(--urlbar-height) !important;
-	min-height: var(--urlbar-height) !important;
+	max-height: var(--urlbar-height-setting) !important;
+	height: var(--urlbar-height-setting) !important;
+	min-height: var(--urlbar-height-setting) !important;
 }
 
 #navigator-toolbox:focus-within > .browser-toolbar {
@@ -224,7 +224,7 @@ tab {
 #nav-bar:hover {
 	--moz-transform: scale(1) !important;
 	transform: scale(1) !important;
-	max-height: var(--urlbar-height) !important;
-	height: var(--urlbar-height) !important;
-	min-height: var(--urlbar-height) !important;
+	max-height: var(--urlbar-height-setting) !important;
+	height: var(--urlbar-height-setting) !important;
+	min-height: var(--urlbar-height-setting) !important;
 } */
