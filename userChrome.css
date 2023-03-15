@@ -89,6 +89,31 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 #widget-overflow { margin: 0 !important; }
 #appMenu-popup { margin: 0 !important; }
 #customizationui-widget-panel { margin: 0 !important; }
+#unified-extensions-panel { margin: 0 !important; }
+
+/* --- UNIFIED EXTENSIONS BUTTON ------------------------ */
+
+/* make extension icons smaller */
+#unified-extensions-view {
+	--uei-icon-size: 16px;
+}
+
+/* hide bloat */
+.unified-extensions-item-message-deck,
+#unified-extensions-view > .panel-header,
+#unified-extensions-view > toolbarseparator,
+#unified-extensions-manage-extensions {
+	display: none !important;
+}
+
+/* reduce padding between the menu items */
+#unified-extensions-view > vbox > vbox > .unified-extensions-item { padding-block: 0px !important; }
+.unified-extensions-item-menu-button.subviewbutton { padding: 2px !important; }
+
+/* add 3px padding on the top and the bottom of the box */
+.panel-subview-body {
+	padding: 3px 0px !important;
+}
 
 /* --- DEBLOAT URLBAR ----------------------------------- */
 
