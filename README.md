@@ -29,6 +29,8 @@ there is no such directory create it.
 If you're unsure what the path to your profile's directory is, you can find out
 by going to `about:profiles`.
 
+Use the Customize Toolbar menu to remove Firefox View and new tab button.
+
 Then either install the Jetbrains Mono font, or change the relevant line of
 `userChrome.css` (search for 'Jetbrains Mono') to some other font that you have
 installed. This affects the urlbar font.
