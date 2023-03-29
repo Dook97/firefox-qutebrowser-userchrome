@@ -1,8 +1,11 @@
 :root {
-	--tab-active-bg-color: #057;		/* background color of an active tab */
-	--tab-inactive-bg-color: #333;		/* background color of an inactive tab */
-	--tab-active-fg-fallback-color: #eee;	/* color of text in an active tab without a container */
-	--tab-inactive-fg-fallback-color: #888;	/* color of text in an inactive tab without a container */
+	--tab-active-bg-color: #057;			/* background color of an active tab */
+	--tab-inactive-bg-color: #333;			/* background color of an inactive tab */
+	--tab-active-fg-fallback-color: #eee;		/* color of text in an active tab without a container */
+	--tab-inactive-fg-fallback-color: #888;		/* color of text in an inactive tab without a container */
+	--urlbar-focused-bg-color: #41404c;		/* urlbar background color when focused */
+	--urlbar-not-focused-bg-color: #1c1b22; 	/* urlbar background color when not focused */
+	--toolbar-bgcolor: #2b2a33 !important;		/* toolbar background color */
 
 	/* try increasing if you encounter problems */
 	--urlbar-height-setting: 24px;
@@ -14,6 +17,8 @@
 	--arrowpanel-menuitem-border-radius: 0px !important;
 	--toolbarbutton-border-radius: 0px !important;
 	--toolbarbutton-inner-padding: 0px 2px !important;
+	--toolbar-field-focus-background-color: var(--urlbar-focused-bg-color) !important;
+	--toolbar-field-background-color: var(--urlbar-not-focused-bg-color) !important;
 }
 
 /* --- GENERAL DEBLOAT ---------------------------------- */
@@ -50,7 +55,9 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 
 #nav-bar, #navigator-toolbox {
 	border-width: 0 !important;
-	--toolbar-field-focus-border-color: #42414d;
+
+	/* make urlbar on-focus border same color sa urlbar itself */
+	--toolbar-field-focus-border-color: var(--urlbar-focused-bg-color);
 }
 
 #urlbar-container {
@@ -77,11 +84,10 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 
 #urlbar-input-container {
 	border-width: 0 !important;
-	margin-left: 0.5em !important;
 }
 
 #urlbar-input {
-	margin-left: 0.4em !important;
+	margin-left: 0.8em !important;
 	margin-right: 0.4em !important;
 }
 
