@@ -143,6 +143,11 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 
 /* --- STYLE TAB TOOLBAR -------------------------------- */
 
+/* hide tab bar when the is only one tab */
+#tabbrowser-tabs .tabbrowser-tab:only-of-type,
+#tabbrowser-tabs .tabbrowser-tab:only-of-type + #tabbrowser-arrowscrollbox-periphery { display: none !important; }
+#tabbrowser-tabs, #tabbrowser-arrowscrollbox { min-height: 0 !important; }
+
 #titlebar {
 	--proton-tab-block-margin: 0px !important;
 	--tab-block-margin: 0 !important;
