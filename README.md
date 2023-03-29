@@ -10,6 +10,10 @@ Color of text in a tab is determined by its container. If a tab has no
 container, fallback colors are used. You can change the basic colorscheme by
 adjusting values of variables defined at the top of `userChrome.css`.
 
+By default if there is only a single tab the tab bar will be hidden. To disable
+this behaviour, search for `hide tab bar` and comment out the relevant block of
+code.
+
 ## How to use
 
 Enable user chrome:
@@ -62,5 +66,5 @@ uncomment the code there. Otherwise you may only toggle the navbar by pressing
 
 ## Credit
 
-This config is a (soft) fork of
+This userchrome is a fork of
 [aadilayub's](https://github.com/aadilayub/firefox-i3wm-theme).
