@@ -239,6 +239,11 @@ tab {
 	margin-inline-start: 0 !important;
 }
 
+/* hide private browsing indicator */
+#private-browsing-indicator-with-label {
+	display: none;
+}
+
 /* --- AUTOHIDE URLBAR ---------------------------------- */
 
 /* hide urlbar unless focused */
