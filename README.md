@@ -45,18 +45,11 @@ Increase the value of the `--tab-min-height` variable in `userChrome.css`.
 ### invisible button at the end of urlbar
 
 This is intentional - it preserves the `Ctrl-D` functionality. If you don't
-need that, you can remove it in the code. Search for `star-button-box` and
-uncomment the line in question.
+need that you can add `#star-button-box { display: none !important; }`.
 
 ### I want to disable favicons
 
 Search for 'disable favicons' and uncomment the relevant line.
-
-### show navbar on hover
-
-If you want navbar to show on hover go to the bottom of `userChrome.css` and
-uncomment the code there. Otherwise you may only toggle the navbar by pressing
-`Ctrl+L`
 
 ## Credit
 

@@ -1,11 +1,13 @@
 :root {
-	--tab-active-bg-color: #057;			/* background color of an active tab */
-	--tab-inactive-bg-color: #333;			/* background color of an inactive tab */
+	--tab-active-bg-color: #057;
+	--tab-inactive-bg-color: #333;
 	--tab-active-fg-fallback-color: #eee;		/* color of text in an active tab without a container */
 	--tab-inactive-fg-fallback-color: #888;		/* color of text in an inactive tab without a container */
-	--urlbar-focused-bg-color: #41404c;		/* urlbar background color when focused */
-	--urlbar-not-focused-bg-color: #1c1b22; 	/* urlbar background color when not focused */
-	--toolbar-bgcolor: #2b2a33 !important;		/* toolbar background color */
+	--urlbar-focused-bg-color: #41404c;
+	--urlbar-not-focused-bg-color: #1c1b22;
+	--toolbar-bgcolor: #2b2a33 !important;
+	--tab-font: 'Jetbrains Mono';
+	--urlbar-font: 'Jetbrains Mono';
 
 	/* try increasing if you encounter problems */
 	--urlbar-height-setting: 24px;
@@ -19,6 +21,7 @@
 	--toolbarbutton-inner-padding: 0px 2px !important;
 	--toolbar-field-focus-background-color: var(--urlbar-focused-bg-color) !important;
 	--toolbar-field-background-color: var(--urlbar-not-focused-bg-color) !important;
+	--toolbar-field-focus-border-color: transparent !important;
 }
 
 /* --- GENERAL DEBLOAT ---------------------------------- */
@@ -53,20 +56,13 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 	padding: 0px 4px 0px 0px !important;
 }
 
-#nav-bar, #navigator-toolbox {
-	border-width: 0 !important;
-
-	/* make urlbar on-focus border same color sa urlbar itself */
-	--toolbar-field-focus-border-color: var(--urlbar-focused-bg-color);
-}
-
 #urlbar-container {
 	--urlbar-container-height: var(--urlbar-height-setting) !important;
 	margin-left: 0 !important;
 	margin-right: 0 !important;
 	padding-top: 0 !important;
 	padding-bottom: 0 !important;
-	font-family: 'Jetbrains Mono', monospace;
+	font-family: var(--urlbar-font, 'monospace');
 	font-size: 11px;
 }
 
@@ -77,18 +73,13 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 	border-color: var(--lwt-toolbar-field-border-color, hsla(240,5%,5%,.25)) !important;
 }
 
-#urlbar-background {
-	border-width: 0 !important;
-	border-radius: 0 !important;
-}
-
-#urlbar-input-container {
-	border-width: 0 !important;
-}
-
 #urlbar-input {
 	margin-left: 0.8em !important;
 	margin-right: 0.4em !important;
+}
+
+#navigator-toolbox {
+	border: none !important;
 }
 
 /* keep pop-up menus from overlapping with navbar */
@@ -130,10 +121,7 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 #tracking-protection-icon-container { display: none !important; }
 #reader-mode-button{ display: none !important; }
 #star-button { display: none; }
-
-/* this will remove the invisible box at the end of urlbar but also will
- * disable the Ctrl+D shortcut */
-/* #star-button-box { display: none; } */
+#star-button-box:hover { background: inherit !important; }
 
 /* Go to arrow button at the end of the urlbar when searching */
 #urlbar-go-button { display: none; }
@@ -145,7 +133,7 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 
 #titlebar {
 	--proton-tab-block-margin: 0px !important;
-	--tab-block-margin: 0 !important;
+	--tab-block-margin: 0px !important;
 }
 
 #TabsToolbar, .tabbrowser-tab {
@@ -160,13 +148,16 @@ tab:not([selected="true"]) {
 }
 
 tab {
-	font-family: 'Jetbrains Mono', monospace;
+	font-family: var(--tab-font, monospace);
 	font-weight: bold;
 	border: none !important;
 }
 
 /* safari style tab width */
-.tabbrowser-tab[fadein] { max-width: 100vw !important; border: none }
+.tabbrowser-tab[fadein] {
+	max-width: 100vw !important;
+	border: none
+}
 
 /* Hide close button on tabs */
 #tabbrowser-tabs .tabbrowser-tab .tab-close-button { display: none !important; }
@@ -216,7 +207,9 @@ tab {
 #alltabs-button { display: none !important }
 
 /* fix displaying of pinned tabs on overflow */
-#tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container { height: var(--tab-min-height) !important; }
+#tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container {
+	height: var(--tab-min-height) !important;
+}
 
 /* remove overflow scroll buttons */
 #scrollbutton-up, #scrollbutton-down { display: none !important; }
@@ -239,9 +232,9 @@ tab {
 	display: none;
 }
 
-/* --- AUTOHIDE URLBAR ---------------------------------- */
+/* --- AUTOHIDE NAVBAR ---------------------------------- */
 
-/* hide urlbar unless focused */
+/* hide navbar unless focused */
 #nav-bar {
 	min-height: 0 !important;
 	max-height: 0 !important;
@@ -263,20 +256,3 @@ tab {
 	transform: translateY(0);
 	opacity: 1;
 }
-
-/* show on hover */
-/* #titlebar:hover ~ .browser-toolbar,
-#nav-bar:hover,
-#nav-bar:hover + #PersonalToolbar {
-	transform: translateY(0);
-	opacity: 1;
-}
-
-#titlebar:hover~#nav-bar,
-#nav-bar:hover {
-	--moz-transform: scale(1) !important;
-	transform: scale(1) !important;
-	max-height: var(--urlbar-height-setting) !important;
-	height: var(--urlbar-height-setting) !important;
-	min-height: var(--urlbar-height-setting) !important;
-} */
