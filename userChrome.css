@@ -34,6 +34,14 @@
 	display: none !important;
 }
 
+/* remove radius from right-click popup */
+menupopup, panel { --panel-border-radius: 0px !important; }
+menu, menuitem, menucaption { border-radius: 0px !important; }
+
+/* no stupid large buttons in right-click menu */
+menupopup > #context-navigation { display: none !important; }
+menupopup > #context-sep-navigation { display: none !important; }
+
 /* --- DEBLOAT NAVBAR ----------------------------------- */
 
 #back-button { display: none; }
