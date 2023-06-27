@@ -1,5 +1,7 @@
 # A minimalist userChrome.css
 
+## Screenshots
+
 ![](./screenshots/basic.png)
 
 With navbar shown:
