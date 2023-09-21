@@ -1,16 +1,10 @@
 # A minimalist userChrome.css
 
-## Screenshots
+`userChrome.css` is a Firefox configuration file which allows the user to
+define his own look of the browser.
 
-![](./screenshots/basic.png)
-
-With navbar shown:
-
-![](./screenshots/urlbar.png)
-
-Color of text in a tab is determined by its container. If a tab has no
-container, fallback colors are used. You can change the basic colorscheme by
-adjusting values of variables defined at the top of `userChrome.css`.
+This particular config works best with a minimalist WM like dwm, xmonad or
+awesome.
 
 ## How to use
 
@@ -37,6 +31,18 @@ installed. This affects the urlbar font.
 
 Optionally install [tridactyl](https://github.com/tridactyl/tridactyl) or a
 similar extension for best results.
+
+Color of text in a tab is determined by its container. If a tab has no
+container, fallback colors are used. You can change the basic colorscheme by
+adjusting values of variables defined at the top of `userChrome.css`.
+
+## Screenshots
+
+![](./screenshots/basic.png)
+
+With navbar shown:
+
+![](./screenshots/urlbar.png)
 
 ## Common issues
 
