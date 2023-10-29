@@ -238,11 +238,6 @@ tab {
 
 /* remove firefox view */
 #firefox-view-button { display: none !important; }
-#tabbrowser-tabs {
-	border-inline-start: 0 !important;
-	padding-inline-start: 0 !important;
-	margin-inline-start: 0 !important;
-}
 
 /* hide private browsing indicator */
 #private-browsing-indicator-with-label {
