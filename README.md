@@ -17,6 +17,8 @@ Enable compact mode:
 1) in `about:config` set `browser.compactmode.show` to `true`
 2) in the customize toolbar menu set `density` to `compact`
 
+Via the customize toolbar menu remove firefox view (the top-left corner icon)
+
 Enable dark theme in settings.
 
 Copy `userChrome.css` to the `chrome` directory in your firefox profile. If

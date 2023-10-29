@@ -236,9 +236,6 @@ tab {
 	display: none !important;
 }
 
-/* remove firefox view */
-#firefox-view-button { display: none !important; }
-
 /* hide private browsing indicator */
 #private-browsing-indicator-with-label {
 	display: none;
