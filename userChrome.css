@@ -116,10 +116,6 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 	padding: 3px 0px !important;
 }
 
-#unified-extensions-view .unified-extensions-item-menu-button {
-	margin-inline-end: 0 !important;
-}
-
 #unified-extensions-view .toolbarbutton-icon {
 	padding: 0 !important;
 }
@@ -127,6 +123,15 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 .unified-extensions-item-contents {
 	line-height: 1 !important;
 	white-space: nowrap !important;
+}
+
+#unified-extensions-panel .unified-extensions-item {
+	margin-block: 0 !important;
+}
+
+.toolbar-menupopup :is(menu, menuitem), .subview-subheader, panelview
+.toolbarbutton-1, .subviewbutton, .widget-overflow-list .toolbarbutton-1 {
+	padding: 4px !important;
 }
 
 /* --- DEBLOAT URLBAR ----------------------------------- */
