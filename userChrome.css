@@ -96,6 +96,11 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 #customizationui-widget-panel { margin: 0 !important; }
 #unified-extensions-panel { margin: 0 !important; }
 
+/* make browser dialog boxes not overlap the navbar */
+:not(.content-prompt-dialog) > .dialogOverlay > .dialogBox:not(.spotlightBox) {
+	margin-top: 0px !important;
+}
+
 /* --- UNIFIED EXTENSIONS BUTTON ------------------------ */
 
 /* make extension icons smaller */
