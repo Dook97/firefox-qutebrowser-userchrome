@@ -59,6 +59,11 @@ menupopup > #context-sep-navigation { display: none !important; }
 /* remove padding between toolbar buttons */
 toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 
+/* add it back to the downloads button, otherwise it's too close to the urlbar */
+#downloads-button {
+	margin-left: 2px !important;
+}
+
 /* add padding to the right of the last button so that it doesn't touch the edge of the window */
 #PanelUI-menu-button {
 	padding: 0px 4px 0px 0px !important;
