@@ -40,11 +40,11 @@ adjusting values of variables defined at the top of `userChrome.css`.
 
 ## Screenshots
 
-![](./screenshots/basic.png)
+![](https://raw.githubusercontent.com/Dook97/firefox-qutebrowser-userchrome/screenshots/basic.png)
 
 With navbar shown:
 
-![](./screenshots/urlbar.png)
+![](https://github.com/Dook97/firefox-qutebrowser-userchrome/blob/screenshots/urlbar.png)
 
 ## Common issues
 
