@@ -268,7 +268,8 @@ tab {
 }
 
 /* show on focus */
-#nav-bar:focus-within {
+#titlebar:hover ~ .browser-toolbar,
+#nav-bar:hover, #nav-bar:focus-within {
 	--moz-transform: scale(1) !important;
 	transform: scale(1) !important;
 	max-height: var(--urlbar-height-setting) !important;
