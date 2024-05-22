@@ -29,11 +29,6 @@
 /* Bottom left page loading status or url preview */
 #statuspanel { display: none !important; }
 
-/* Hide dropdown that appears when you type in search bar */
-.autocomplete-history-popup, panel[type=autocomplete-richlistbox], panel[type=autocomplete] {
-	display: none !important;
-}
-
 /* remove radius from right-click popup */
 menupopup, panel { --panel-border-radius: 0px !important; }
 menu, menuitem, menucaption { border-radius: 0px !important; }
