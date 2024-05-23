@@ -29,11 +29,6 @@
 /* Bottom left page loading status or url preview */
 #statuspanel { display: none !important; }
 
-/* Hide dropdown that appears when you type in search bar */
-.autocomplete-history-popup, panel[type=autocomplete-richlistbox], panel[type=autocomplete] {
-	display: none !important;
-}
-
 /* remove radius from right-click popup */
 menupopup, panel { --panel-border-radius: 0px !important; }
 menu, menuitem, menucaption { border-radius: 0px !important; }
@@ -263,22 +258,13 @@ tab {
 	min-height: 0 !important;
 	max-height: 0 !important;
 	height: 0 !important;
-	--moz-transform: scaleY(0) !important;
-	transform: scaleY(0) !important;
 }
 
 /* show on focus - uncomment the line below this if you want cursor hover
  * events to trigger the navbar  */
 /* #titlebar:hover ~ .browser-toolbar, #nav-bar:hover, */
 #nav-bar:focus-within {
-	--moz-transform: scale(1) !important;
-	transform: scale(1) !important;
 	max-height: var(--urlbar-height-setting) !important;
 	height: var(--urlbar-height-setting) !important;
 	min-height: var(--urlbar-height-setting) !important;
-}
-
-#navigator-toolbox:focus-within > .browser-toolbar {
-	transform: translateY(0);
-	opacity: 1;
 }
