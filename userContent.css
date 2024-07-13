@@ -1,0 +1,83 @@
+/* Wallpaper */
+@-moz-document url("about:home"), url("about:newtab") {
+  body {
+    background: url("wallpaper.jpg") center/cover no-repeat fixed !important;
+  }
+}
+
+/* Colour Addons page */
+@-moz-document domain("addons.mozilla.org"){
+  :root{
+    --uc-card-background: #ddcebc;
+    --uc-page-background: #f1e3d1;
+    --uc-attention-background: #908d6a;
+    --uc-attention-color: #993333;
+    --uc-link-color: #d09700;
+    --uc-text-color: #64513e;
+    --uc-item-hover-background: #786653;
+  }
+  .LandingPage-header{
+    background-color: var(--uc-attention-background) !important;
+    color: var(--uc-attention-color) !important;
+  }
+  .DropdownMenuItem-link a,
+  .DropdownMenuItem-section,
+  .Button--neutral,
+  .SearchResult-summary,
+  body{
+    color: var(--uc-text-color) !important;
+  }
+  .Page-content{
+    background-color: var(--uc-page-background) !important;
+  }
+  .AutoSearchInput-query,
+  h1,h2,
+  .Home-SubjectShelf-link,
+  .SecondaryHero{
+    color: inherit !important;
+  }
+  .MetadataCard,
+  .AutoSearchInput-query,
+  .SecondaryHero-module,
+  .Card-header,
+  .Card-contents,
+  .Card-footer{
+    background-color: var(--uc-card-background) !important;
+  }
+  .AddonsCard-list,
+  .CardList ul > li{
+    background: none !important;
+  }
+  .DropdownMenuItem-link a:hover,
+  .DropdownMenuItem-link a:active,
+  .PromotedBadge-label,
+  .Home-SubjectShelf-link:active,
+  .Home-SubjectShelf-link:hover,
+  .SearchResult-link,
+  .Card-footer-text a,
+  .Card-shelf-footer-in-header a{
+    color: var(--uc-link-color) !important;
+  }
+  .AddonsCard--horizontal ul.AddonsCard-list .SearchResult-wrapper:focus,
+  .AddonsCard--horizontal ul.AddonsCard-list .SearchResult-wrapper:hover{
+    background-color: var(--uc-item-hover-color) !important;
+  }
+  .LanguageTools-header-row{
+    background-color: rgba(0,0,0,0.2) !important;
+  }
+  .responsiveTable tbody tr:nth-child(2n){
+    background-color: rgba(0,0,0,0.1) !important;
+  }
+  .DropdownMenu-items,
+  .Select{
+    background-color: var(--uc-item-hover-background) !important;
+    color: var(--uc-text-color) !important;
+  }
+
+  .HeroRecommendation{
+    background-image: linear-gradient(#8C7B68,var(--uc-page-background)) !important;
+  }
+  .ShowMoreCard-contents::after {
+    background-image: linear-gradient(hsla(0,0%,100%,0),var(--uc-page-background)) !important;
+  }
+}
