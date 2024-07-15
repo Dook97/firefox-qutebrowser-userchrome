@@ -114,7 +114,7 @@ toolbar .toolbarbutton-1 {
 	padding-top: 0 !important;
 	padding-bottom: 0 !important;
 	font-family: var(--urlbar-font, 'monospace');
-	font-size: 15px;
+	font-size: 14px;
 }
 
 #urlbar {
@@ -251,7 +251,7 @@ panelview .toolbarbutton-1,
 #TabsToolbar,
 .tabbrowser-tab {
 	max-height: var(--tab-min-height) !important;
-	font-size: 17px !important;
+	font-size: 16px !important;
 }
 
 /* Change color of normal tabs */
@@ -262,7 +262,7 @@ tab:not([selected="true"]) {
 
 tab {
 	font-family: var(--tab-font, monospace);
-	font-weight: bold;
+	font-weight: 450;
 	border: none !important;
 }
 
@@ -301,12 +301,6 @@ tab {
 #tabbrowser-tabs .tabbrowser-tab:hover:not([selected]) .tab-content {
 	background: var(--tab-active-fg-fallback-color) !important;
 	color: var(--tab-active-bg-color) !important;
-}
-
-/* Center tab text */
-.tab-label-container {
-	display: grid;
-	justify-items: safe center;
 }
 
 /* hide window controls */
@@ -362,11 +356,6 @@ tab {
 	min-height: 0 !important;
 	max-height: 0 !important;
 	height: 0 !important;
-}
-
-.tab-label-container {
-	display: grid;
-	justify-items: safe center;
 }
 
 /* show on focus - uncomment the line below this if you want cursor hover
