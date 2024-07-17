@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/6e7750d0-0785-4baa-9904-49123542fdbf)
+
 ## Usage
 
 1) In `about:config` set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
