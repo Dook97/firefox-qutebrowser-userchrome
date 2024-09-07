@@ -1,13 +1,24 @@
 :root {
-	--tab-active-bg-color: #f1e3d1;
+	/* --tab-active-bg-color: #f1e3d1;
 	--tab-inactive-bg-color: #f1e3d1;
+	
 	--tab-active-fg-fallback-color: #bf7979;
-	/* color of text in an active tab without a container */
 	--tab-inactive-fg-fallback-color: #c9b9a7;
-	/* color of text in an inactive tab without a container */
+	
 	--urlbar-focused-bg-color: #ddcebc;
 	--urlbar-not-focused-bg-color: #ddcebc;
-	--toolbar-bgcolor: #c9b9a7 !important;
+	--toolbar-bgcolor: #c9b9a7 !important; */
+
+	--tab-active-bg-color: #242015;
+	--tab-inactive-bg-color: #242015;
+	
+	--tab-active-fg-fallback-color: #db930d;
+	--tab-inactive-fg-fallback-color: #4d3f32;
+
+	--urlbar-focused-bg-color: #3a3124;
+	--urlbar-not-focused-bg-color: #3a3124;
+	--toolbar-bgcolor: #4d3f32 !important;
+
 	--tab-font: 'IBM Plex Sans';
 	--urlbar-font: 'IBM Plex Sans';
 

@@ -1,20 +1,28 @@
 /* Wallpaper */
 @-moz-document url("about:home"), url("about:newtab") {
   body {
-    background: url("wallpaper.jpg") center/cover no-repeat fixed !important;
+    background: url("wallpaper.jpg") repeat !important;
   }
 }
 
 /* Colour Addons page */
 @-moz-document domain("addons.mozilla.org"){
   :root{
-    --uc-card-background: #ddcebc;
+    /* --uc-card-background: #ddcebc;
     --uc-page-background: #f1e3d1;
     --uc-attention-background: #908d6a;
     --uc-attention-color: #993333;
     --uc-link-color: #d09700;
     --uc-text-color: #64513e;
-    --uc-item-hover-background: #786653;
+    --uc-item-hover-background: #786653 */
+
+    --uc-card-background: #3a3124;
+    --uc-page-background: #242015;
+    --uc-attention-background: #7a7653;
+    --uc-attention-color: #A82D56;
+    --uc-link-color: #db930d;
+    --uc-text-color: #ebe0bb;
+    --uc-item-hover-background: #f1e9d0;
   }
   .LandingPage-header{
     background-color: var(--uc-attention-background) !important;
@@ -75,7 +83,7 @@
   }
 
   .HeroRecommendation{
-    background-image: linear-gradient(#8C7B68,var(--uc-page-background)) !important;
+    background-image: linear-gradient(#5f4e41,var(--uc-page-background)) !important;
   }
   .ShowMoreCard-contents::after {
     background-image: linear-gradient(hsla(0,0%,100%,0),var(--uc-page-background)) !important;
