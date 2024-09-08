@@ -38,6 +38,9 @@
 }
 
 /* --- GENERAL DEBLOAT ---------------------------------- */
+.urlbarView-row:is(:hover, [selected]) {
+	background: rgb(from var(--tab-active-fg-fallback-color) calc(r + 40) calc(g + 40) b / 0.3) !important;
+}
 
 /* Bottom left page loading status or url preview */
 #statuspanel {
