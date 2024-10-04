@@ -91,15 +91,10 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 }
 
 /* keep pop-up menus from overlapping with navbar */
-#widget-overflow { margin: 0 !important; }
-#appMenu-popup { margin: 0 !important; }
-#customizationui-widget-panel { margin: 0 !important; }
-#unified-extensions-panel { margin: 0 !important; }
-
-/* make browser dialog boxes not overlap the navbar */
-:not(.content-prompt-dialog) > .dialogOverlay > .dialogBox:not(.spotlightBox) {
-	margin-top: 0px !important;
-}
+#widget-overflow { margin: 4px !important; }
+#customizationui-widget-panel { margin: 4px !important; }
+#unified-extensions-panel { margin-top: 4px !important; }
+#appMenu-popup { margin-top: 4px !important; }
 
 /* --- UNIFIED EXTENSIONS BUTTON ------------------------ */
 
