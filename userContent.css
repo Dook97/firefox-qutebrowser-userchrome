@@ -1,30 +1,31 @@
 /* Wallpaper */
 @-moz-document url("about:home"), url("about:newtab") {
   body {
-    background: url("wallpaper.jpg") repeat !important;
+    /* background: url("wallpaper.jpg") repeat !important; */
+    background: url("wallpaper.jpg") center/cover no-repeat fixed !important;
   }
 }
 
 /* Colour Addons page */
-@-moz-document domain("addons.mozilla.org"){
-  :root{
-    /* --uc-card-background: #ddcebc;
+@-moz-document domain("addons.mozilla.org") {
+  :root {
+    --uc-card-background: #ddcebc;
     --uc-page-background: #f1e3d1;
     --uc-attention-background: #908d6a;
     --uc-attention-color: #993333;
     --uc-link-color: #d09700;
     --uc-text-color: #64513e;
-    --uc-item-hover-background: #786653 */
+    --uc-item-hover-background: #786653;
 
-    --uc-card-background: #3a3124;
+    /* --uc-card-background: #3a3124;
     --uc-page-background: #242015;
     --uc-attention-background: #7a7653;
-    --uc-attention-color: #A82D56;
+    --uc-attention-color: #a82d56;
     --uc-link-color: #db930d;
     --uc-text-color: #ebe0bb;
-    --uc-item-hover-background: #f1e9d0;
+    --uc-item-hover-background: #f1e9d0; */
   }
-  .LandingPage-header{
+  .LandingPage-header {
     background-color: var(--uc-attention-background) !important;
     color: var(--uc-attention-color) !important;
   }
@@ -32,16 +33,17 @@
   .DropdownMenuItem-section,
   .Button--neutral,
   .SearchResult-summary,
-  body{
+  body {
     color: var(--uc-text-color) !important;
   }
-  .Page-content{
+  .Page-content {
     background-color: var(--uc-page-background) !important;
   }
   .AutoSearchInput-query,
-  h1,h2,
+  h1,
+  h2,
   .Home-SubjectShelf-link,
-  .SecondaryHero{
+  .SecondaryHero {
     color: inherit !important;
   }
   .MetadataCard,
@@ -49,11 +51,11 @@
   .SecondaryHero-module,
   .Card-header,
   .Card-contents,
-  .Card-footer{
+  .Card-footer {
     background-color: var(--uc-card-background) !important;
   }
   .AddonsCard-list,
-  .CardList ul > li{
+  .CardList ul > li {
     background: none !important;
   }
   .DropdownMenuItem-link a:hover,
@@ -63,29 +65,35 @@
   .Home-SubjectShelf-link:hover,
   .SearchResult-link,
   .Card-footer-text a,
-  .Card-shelf-footer-in-header a{
+  .Card-shelf-footer-in-header a {
     color: var(--uc-link-color) !important;
   }
   .AddonsCard--horizontal ul.AddonsCard-list .SearchResult-wrapper:focus,
-  .AddonsCard--horizontal ul.AddonsCard-list .SearchResult-wrapper:hover{
+  .AddonsCard--horizontal ul.AddonsCard-list .SearchResult-wrapper:hover {
     background-color: var(--uc-item-hover-color) !important;
   }
-  .LanguageTools-header-row{
-    background-color: rgba(0,0,0,0.2) !important;
+  .LanguageTools-header-row {
+    background-color: rgba(0, 0, 0, 0.2) !important;
   }
-  .responsiveTable tbody tr:nth-child(2n){
-    background-color: rgba(0,0,0,0.1) !important;
+  .responsiveTable tbody tr:nth-child(2n) {
+    background-color: rgba(0, 0, 0, 0.1) !important;
   }
   .DropdownMenu-items,
-  .Select{
+  .Select {
     background-color: var(--uc-item-hover-background) !important;
     color: var(--uc-text-color) !important;
   }
 
-  .HeroRecommendation{
-    background-image: linear-gradient(#5f4e41,var(--uc-page-background)) !important;
+  .HeroRecommendation {
+    background-image: linear-gradient(
+      #5f4e41,
+      var(--uc-page-background)
+    ) !important;
   }
   .ShowMoreCard-contents::after {
-    background-image: linear-gradient(hsla(0,0%,100%,0),var(--uc-page-background)) !important;
+    background-image: linear-gradient(
+      hsla(0, 0%, 100%, 0),
+      var(--uc-page-background)
+    ) !important;
   }
 }
