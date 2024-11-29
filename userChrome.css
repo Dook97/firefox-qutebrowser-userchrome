@@ -159,7 +159,7 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 }
 
 #TabsToolbar, .tabbrowser-tab {
-	/* max-height: var(--tab-min-height) !important; */
+	max-height: var(--tab-min-height) !important;
 	font-size: 11px !important;
 }
 
@@ -173,6 +173,17 @@ tab {
 	font-family: var(--tab-font, monospace);
 	font-weight: bold;
 	border: none !important;
+	padding-top: 0 !important;
+}
+
+.tab-content {
+	padding: 0 0 0 var(--tab-inline-padding);
+}
+
+.tab-background {
+	margin-block: 0 !important;
+	min-height: var(--tab-min-height);
+	outline-offset: 0 !important;
 }
 
 /* safari style tab width */
@@ -233,6 +244,10 @@ tab {
 	height: var(--tab-min-height) !important;
 }
 
+#tabbrowser-tabs {
+	min-height: var(--tab-min-height) !important;
+}
+
 /* remove overflow scroll buttons */
 #scrollbutton-up, #scrollbutton-down { display: none !important; }
 
@@ -245,21 +260,3 @@ tab {
 #private-browsing-indicator-with-label {
 	display: none;
 }
-/**/
-/* /* --- AUTOHIDE NAVBAR ---------------------------------- */ */
-/**/
-/* /* hide navbar unless focused */ */
-/* #nav-bar { */
-/* 	min-height: 0 !important; */
-/* 	max-height: 0 !important; */
-/* 	height: 0 !important; */
-/* } */
-/**/
-/* /* show on focus - uncomment the line below this if you want cursor hover */
-/*  * events to trigger the navbar  */ */
-/* /* #titlebar:hover ~ .browser-toolbar, #nav-bar:hover, */ */
-/* #nav-bar:focus-within { */
-/* 	max-height: var(--urlbar-height-setting) !important; */
-/* 	height: var(--urlbar-height-setting) !important; */
-/* 	min-height: var(--urlbar-height-setting) !important; */
-/* } */
