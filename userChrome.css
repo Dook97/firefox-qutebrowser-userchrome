@@ -48,6 +48,7 @@ menupopup > #context-sep-navigation { display: none !important; }
 #fxa-toolbar-menu-button { display: none; }
 /* empty space before and after the url bar */
 #customizableui-special-spring1, #customizableui-special-spring2 { display: none; }
+.private-browsing-indicator-with-label { display: none; }
 
 /* --- STYLE NAVBAR ------------------------------------ */
 
