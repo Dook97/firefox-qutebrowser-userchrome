@@ -109,10 +109,8 @@ menupopup > #context-sep-navigation {
 }
 
 /* empty space before and after the url bar */
-#customizableui-special-spring1,
-#customizableui-special-spring2 {
-  display: none;
-}
+#customizableui-special-spring1, #customizableui-special-spring2 { display: none; }
+.private-browsing-indicator-with-label { display: none; }
 
 /* --- STYLE NAVBAR ------------------------------------ */
 
@@ -161,26 +159,10 @@ toolbar .toolbarbutton-1 {
 }
 
 /* keep pop-up menus from overlapping with navbar */
-#widget-overflow {
-  margin: 0 !important;
-}
-
-#appMenu-popup {
-  margin: 0 !important;
-}
-
-#customizationui-widget-panel {
-  margin: 0 !important;
-}
-
-#unified-extensions-panel {
-  margin: 0 !important;
-}
-
-/* make browser dialog boxes not overlap the navbar */
-:not(.content-prompt-dialog) > .dialogOverlay > .dialogBox:not(.spotlightBox) {
-  margin-top: 0px !important;
-}
+#widget-overflow { margin: 4px !important; }
+#customizationui-widget-panel { margin: 4px !important; }
+#unified-extensions-panel { margin-top: 4px !important; }
+#appMenu-popup { margin-top: 4px !important; }
 
 /* --- UNIFIED EXTENSIONS BUTTON ------------------------ */
 
@@ -291,9 +273,20 @@ tab:not([selected="true"]) {
 }
 
 tab {
-  font-family: var(--tab-font, monospace);
-  font-weight: 450;
-  border: none !important;
+	font-family: var(--tab-font, monospace);
+	font-weight: bold;
+	border: none !important;
+	padding-top: 0 !important;
+}
+
+.tab-content {
+	padding: 0 0 0 var(--tab-inline-padding);
+}
+
+.tab-background {
+	margin-block: 0 !important;
+	min-height: var(--tab-min-height);
+	outline-offset: 0 !important;
 }
 
 /* safari style tab width */
@@ -369,6 +362,10 @@ tab {
   height: var(--tab-min-height) !important;
 }
 
+#tabbrowser-tabs {
+	min-height: var(--tab-min-height) !important;
+}
+
 /* remove overflow scroll buttons */
 #scrollbutton-up,
 #scrollbutton-down {
@@ -387,20 +384,35 @@ tab {
 
 /* --- AUTOHIDE NAVBAR ---------------------------------- */
 
-/* hide navbar unless focused */
-#nav-bar {
-  min-height: 0 !important;
-  max-height: 0 !important;
-  height: 0 !important;
+#nav-bar,
+#urlbar {
+	transform: translateY(calc(0px - var(--urlbar-height-setting)));
+	opacity: 0;
 }
 
-/* show on focus - uncomment the line below this if you want cursor hover
- * events to trigger the navbar  */
-/* #titlebar:hover ~ .browser-toolbar, #nav-bar:hover, */
+#navigator-toolbox {
+	min-height: var(--tab-min-height) !important;
+	height: var(--tab-min-height) !important;
+}
+
+#navigator-toolbox:focus-within {
+	min-height: calc(var(--urlbar-height-setting) + var(--tab-min-height)) !important;
+	height: calc(var(--urlbar-height-setting) + var(--tab-min-height)) !important;
+	transform: translateY(calc(0px - var(--tab-min-height)));
+}
+
+#TabsToolbar {
+	transform: translateY(var(--tab-min-height));
+}
+
 #nav-bar:focus-within {
-  max-height: var(--urlbar-height-setting) !important;
-  height: var(--urlbar-height-setting) !important;
-  min-height: var(--urlbar-height-setting) !important;
+	transform: translateY(var(--tab-min-height));
+	opacity: 1;
+}
+
+#urlbar:focus-within {
+	transform: translateY(0);
+	opacity: 1;
 }
 
 /* show on toolbox focus
