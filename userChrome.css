@@ -277,9 +277,13 @@ tab {
 }
 
 #navigator-toolbox:focus-within {
-	min-height: calc(var(--urlbar-height-setting) + var(--tab-min-height)) !important;
-	height: calc(var(--urlbar-height-setting) + var(--tab-min-height)) !important;
+	min-height: auto !important;
+	height: auto !important;
 	transform: translateY(calc(0px - var(--tab-min-height)));
+}
+
+#PersonalToolbar {
+	transform: translateY(var(--tab-min-height));
 }
 
 #TabsToolbar {
