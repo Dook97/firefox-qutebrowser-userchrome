@@ -27,8 +27,8 @@ there is no such directory create it.
 If you're unsure what the path to your profile's directory is, you can find out
 by going to `about:profiles`.
 
-Then either install the Jetbrains Mono font, or change the relevant line of
-`userChrome.css` (search for 'Jetbrains Mono') to some other font that you have
+Then either install the DejaVu Sans Mono font, or change the relevant line of
+`userChrome.css` (search for 'DejaVu Sans Mono') to some other font that you have
 installed. This affects the urlbar font.
 
 Optionally install [tridactyl](https://github.com/tridactyl/tridactyl) or a
