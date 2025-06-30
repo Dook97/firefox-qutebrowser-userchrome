@@ -144,6 +144,8 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 /* #reader-mode-button{ display: none !important; } */
 /* #star-button { display: none; } */
 /* #star-button-box:hover { background: inherit !important; } */
+#urlbar-searchmode-switcher { display: none; }
+#searchmode-switcher-chicklet { display: none !important; }
 
 #identity-box { margin-inline-end: 0 !important; }
 
