@@ -288,6 +288,10 @@ tab {
 	background-color: #fff481;
 }
 
+:root[inFullscreen] > body > #browser {
+	margin-top: 0 !important;
+}
+
 /* --- AUTOHIDE NAVBAR ---------------------------------- */
 
 :root {
