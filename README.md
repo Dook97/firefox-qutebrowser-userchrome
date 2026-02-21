@@ -52,9 +52,9 @@ With navbar shown:
 
 Increase the value of the `--tab-min-height` variable in `userChrome.css`.
 
-### I want to disable favicons
+### I want to enable favicons
 
-Search for 'disable favicons' and uncomment the relevant line.
+Search for 'disable favicons' and comment the relevant line.
 
 ### I want to disable tab numbers
 
