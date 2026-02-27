@@ -139,6 +139,18 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 	padding: 4px !important;
 }
 
+/* --- QUICK BOOKMARK POPUP ----------------------------- */
+
+menupopup, panel { &::part(content) { height: auto !important; } }
+
+#editBMPanel_folderTree, #editBMPanel_tagsSelector {
+	height: 40vh !important;
+}
+
+#editBMPanel_folderMenuList {
+	display: none !important;
+}
+
 /* --- DEBLOAT URLBAR ----------------------------------- */
 
 #pageActionButton { display: none; }
