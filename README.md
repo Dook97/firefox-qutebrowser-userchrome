@@ -56,9 +56,9 @@ Increase the value of the `--tab-min-height` variable in `userChrome.css`.
 
 Search for 'disable favicons' and comment the relevant line.
 
-### I want to disable tab numbers
+### I want to enable tab numbers
 
-Delete code under the comment line which reads `numbering tabs`.
+Uncomment code under the comment line which reads `numbering tabs`.
 
 ## Credit
 

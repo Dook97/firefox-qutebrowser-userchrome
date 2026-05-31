@@ -287,18 +287,18 @@ tab {
 }
 
 /* numbering tabs */
-#tabbrowser-tabs { counter-reset: tab-counter; }
-.tabbrowser-tab { counter-increment: tab-counter; }
-.tabbrowser-tab .tab-content {
-	padding-left: 0 !important;
-}
-.tabbrowser-tab .tab-content::before {
-	content: counter(tab-counter);
-	margin-right: 0.5em;
-	padding: var(--tab-min-height) 0.4em;
-	color: #222;
-	background-color: #fff481;
-}
+/* #tabbrowser-tabs { counter-reset: tab-counter; } */
+/* .tabbrowser-tab { counter-increment: tab-counter; } */
+/* .tabbrowser-tab .tab-content { */
+/* 	padding-left: 0 !important; */
+/* } */
+/* .tabbrowser-tab .tab-content::before { */
+/* 	content: counter(tab-counter); */
+/* 	margin-right: 0.5em; */
+/* 	padding: var(--tab-min-height) 0.4em; */
+/* 	color: #222; */
+/* 	background-color: #fff481; */
+/* } */
 
 :root[inFullscreen] > body > #browser {
 	margin-top: 0 !important;
