@@ -10,18 +10,21 @@
 	--urlbar-font: 'DejaVu Sans Mono';
 
 	/* try increasing if you encounter problems */
-	--urlbar-height-setting: 22px;
+	--navbar-height-setting: 24px;
 	--tab-min-height: 16px !important;
 
 	/* I don't recommend you touch this unless you know what you're doing */
 	--arrowpanel-menuitem-padding: 2px !important;
-	--arrowpanel-border-radius: 0px !important;
-	--arrowpanel-menuitem-border-radius: 0px !important;
-	--toolbarbutton-border-radius: 0px !important;
-	--toolbarbutton-inner-padding: 0px 2px !important;
+	--arrowpanel-border-radius: 0 !important;
+	--arrowpanel-menuitem-border-radius: 0 !important;
+	--toolbarbutton-border-radius: 0 !important;
 	--toolbar-field-focus-background-color: var(--urlbar-focused-bg-color) !important;
 	--toolbar-field-background-color: var(--urlbar-not-focused-bg-color) !important;
 	--toolbar-field-focus-border-color: transparent !important;
+	--chrome-block-radius: 0 !important;
+	--urlbar-border-radius: 0 !important;
+	--panel-box-shadow-margin: 0 !important;
+	--toolbarbutton-padding-inner: 0.3em !important;
 }
 
 /* --- GENERAL DEBLOAT ---------------------------------- */
@@ -30,8 +33,8 @@
 #statuspanel { display: none !important; }
 
 /* remove radius from right-click popup */
-menupopup, panel { --panel-border-radius: 0px !important; }
-menu, menuitem, menucaption { border-radius: 0px !important; }
+menupopup, panel { --panel-border-radius: 0 !important; }
+menu, menuitem, menucaption { border-radius: 0 !important; }
 
 /* no stupid large buttons in right-click menu */
 menupopup > #context-navigation { display: none !important; }
@@ -45,7 +48,6 @@ menupopup > #context-sep-navigation { display: none !important; }
 #stop-button { display: none; }
 #home-button { display: none; }
 #library-button { display: none; }
-/* #fxa-toolbar-menu-button { display: none; } */
 /* empty space before and after the url bar */
 #customizableui-special-spring1, #customizableui-special-spring2 { display: none; }
 .private-browsing-indicator-with-label { display: none; }
@@ -62,11 +64,11 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 
 /* add padding to the right of the last button so that it doesn't touch the edge of the window */
 #PanelUI-menu-button {
-	padding: 0px 4px 0px 0px !important;
+	padding: 0 4px 0 0 !important;
 }
 
 #urlbar-container {
-	--urlbar-container-height: var(--urlbar-height-setting) !important;
+	--urlbar-container-height: var(--navbar-height-setting) !important;
 	margin-left: 0 !important;
 	margin-right: 0 !important;
 	padding-top: 0 !important;
@@ -76,10 +78,15 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 }
 
 #urlbar {
-	--urlbar-height: var(--urlbar-height-setting) !important;
-	--urlbar-toolbar-height: var(--urlbar-height-setting) !important;
-	min-height: var(--urlbar-height-setting) !important;
-	border-color: var(--lwt-toolbar-field-border-color, hsla(240,5%,5%,.25)) !important;
+	padding-left: 0.5em !important;
+	--urlbar-height: var(--navbar-height-setting) !important;
+	--urlbar-toolbar-height: var(--navbar-height-setting) !important;
+	min-height: var(--navbar-height-setting) !important;
+}
+
+.urlbar {
+	overflow: hidden !important;
+	background-color: #1c1b22;
 }
 
 #urlbar-input {
@@ -87,19 +94,21 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 	margin-right: 0.4em !important;
 }
 #urlbar > .urlbar-input-container {
-	padding: 0 !important;
-	border: 0 !important;
+	padding: 0 0.4em 0 0 !important;
 }
 
 #navigator-toolbox {
 	border: none !important;
 }
 
-/* keep pop-up menus from overlapping with navbar */
-#widget-overflow { margin: 3px !important; }
-#customizationui-widget-panel { margin: 3px !important; }
-#unified-extensions-panel { margin-top: 3px !important; }
-#appMenu-popup { margin-top: 3px !important; }
+toolbarbutton, toolbaritem {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+#nav-bar {
+	height: var(--navbar-height-setting) !important;
+}
 
 /* --- UNIFIED EXTENSIONS BUTTON ------------------------ */
 
@@ -118,7 +127,7 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 
 /* add 3px padding on the top and the bottom of the box */
 .panel-subview-body {
-	padding: 3px 0px !important;
+	padding: 3px 0 !important;
 }
 
 #unified-extensions-view .toolbarbutton-icon {
@@ -173,7 +182,7 @@ menupopup, panel { &::part(content) { height: auto !important; } }
 }
 
 /* Go to arrow button at the end of the urlbar when searching */
-#urlbar-go-button { display: none; }
+.urlbar-go-button, #urlbar-revert-button-container { display: none !important; }
 
 /* remove container indicator from urlbar */
 #userContext-label, #userContext-indicator { display: none !important;}
@@ -181,8 +190,8 @@ menupopup, panel { &::part(content) { height: auto !important; } }
 /* --- STYLE TAB TOOLBAR -------------------------------- */
 
 #titlebar {
-	--proton-tab-block-margin: 0px !important;
-	--tab-block-margin: 0px !important;
+	--proton-tab-block-margin: 0 !important;
+	--tab-block-margin: 0 !important;
 }
 
 #TabsToolbar, .tabbrowser-tab {
@@ -227,11 +236,11 @@ tab {
 
 .tabbrowser-tab {
 	/* remove border between tabs */
-	padding-inline: 0px !important;
+	padding-inline: 0 !important;
 	/* reduce fade effect of tab text */
 	--tab-label-mask-size: 1em !important;
 	/* fix pinned tab behaviour on overflow */
-	overflow-clip-margin: 0px !important;
+	overflow-clip-margin: 0 !important;
 }
 
 /* Tab: selected colors */
@@ -247,6 +256,8 @@ tab {
 
 /* hide window controls */
 .titlebar-buttonbox-container { display: none; }
+
+#trust-icon-container {margin: auto 0 !important;}
 
 /* remove titlebar spacers */
 .titlebar-spacer { display: none !important; }
@@ -307,7 +318,7 @@ tab {
 /* --- AUTOHIDE NAVBAR ---------------------------------- */
 
 :root {
-	--uc-navbar-transform: calc(0px - var(--urlbar-height-setting));
+	--uc-navbar-transform: calc(0px - var(--navbar-height-setting));
 }
 
 #navigator-toolbox > div {

@@ -10,7 +10,11 @@ awesome.
 
 Enable user chrome:
 
-1) in `about:config` set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
+* in `about:config` set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
+
+Disable the Nova theme:
+
+* in `about:config` set `browser.nova.enabled` to `false`
 
 Enable compact mode:
 
