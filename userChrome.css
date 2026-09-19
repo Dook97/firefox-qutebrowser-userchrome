@@ -79,7 +79,7 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 }
 
 #urlbar {
-	padding-left: 0.5em !important;
+	padding-left: 0.3em !important;
 	--urlbar-height: var(--navbar-height-setting) !important;
 	--urlbar-toolbar-height: var(--navbar-height-setting) !important;
 	min-height: var(--navbar-height-setting) !important;
